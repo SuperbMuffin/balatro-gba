@@ -134,13 +134,14 @@ typedef u32 (*JokerEffectFunc)(
     enum JokerEvent joker_event,
     JokerEffect** joker_effect
 );
-
 typedef struct
 {
     u8 rarity;
     u8 base_value;
     JokerEffectFunc joker_effect_func;
+    const char* description;
 } JokerInfo;
+
 const JokerInfo* get_joker_registry_entry(int joker_id);
 size_t get_joker_registry_size(void);
 

@@ -342,58 +342,58 @@ static u32 sock_and_buskin_joker_effect(
  */
 const JokerInfo joker_registry[] = 
 {
-    { COMMON_JOKER,    2, default_joker_effect              }, // DEFAULT_JOKER_ID = 0
-    { COMMON_JOKER,    5, greedy_joker_effect               }, // GREEDY_JOKER_ID  = 1
-    { COMMON_JOKER,    5, lusty_joker_effect                }, // etc...  2
-    { COMMON_JOKER,    5, wrathful_joker_effect             }, // 3
-    { COMMON_JOKER,    5, gluttonous_joker_effect           }, // 4
-    { COMMON_JOKER,    3, jolly_joker_effect                }, // 5
-    { COMMON_JOKER,    4, zany_joker_effect                 }, // 6
-    { COMMON_JOKER,    4, mad_joker_effect                  }, // 7
-    { COMMON_JOKER,    4, crazy_joker_effect                }, // 8
-    { COMMON_JOKER,    4, droll_joker_effect                }, // 9
-    { COMMON_JOKER,    3, sly_joker_effect                  }, // 10
-    { COMMON_JOKER,    4, wily_joker_effect                 }, // 11
-    { COMMON_JOKER,    4, clever_joker_effect               }, // 12
-    { COMMON_JOKER,    4, devious_joker_effect              }, // 13 
-    { COMMON_JOKER,    4, crafty_joker_effect               }, // 14
-    { COMMON_JOKER,    5, half_joker_effect                 }, // 15
-    { UNCOMMON_JOKER,  8, joker_stencil_effect              }, // 16
-    { COMMON_JOKER,    5, photograph_joker_effect,          }, // 17
-    { COMMON_JOKER,    4, walkie_talkie_joker_effect        }, // 18
-    { COMMON_JOKER,    5, banner_joker_effect               }, // 19
-    { UNCOMMON_JOKER,  6, blackboard_joker_effect           }, // 20
-    { COMMON_JOKER,    5, mystic_summit_joker_effect        }, // 21
-    { COMMON_JOKER,    4, misprint_joker_effect             }, // 22
-    { COMMON_JOKER,    4, even_steven_joker_effect          }, // 23
-    { COMMON_JOKER,    5, blue_joker_effect                 }, // 24
-    { COMMON_JOKER,    4, odd_todd_joker_effect             }, // 25
-    { UNCOMMON_JOKER,  7, joker_effect_noop,                }, // 26 Shortcut
-    { COMMON_JOKER,    4, business_card_joker_effect        }, // 27
-    { COMMON_JOKER,    4, scary_face_joker_effect           }, // 28
-    { UNCOMMON_JOKER,  7, bootstraps_joker_effect           }, // 29
-    { UNCOMMON_JOKER,  5, joker_effect_noop                 }, // 30 Pareidolia
-    { COMMON_JOKER,    6, reserved_parking_joker_effect     }, // 31
-    { COMMON_JOKER,    4, abstract_joker_effect             }, // 32
-    { UNCOMMON_JOKER,  6, bull_joker_effect                 }, // 33
-    { RARE_JOKER,      8, the_duo_joker_effect              }, // 34
-    { RARE_JOKER,      8, the_trio_joker_effect             }, // 35
-    { RARE_JOKER,      8, the_family_joker_effect           }, // 36
-    { RARE_JOKER,      8, the_order_joker_effect            }, // 37
-    { RARE_JOKER,      8, the_tribe_joker_effect            }, // 38
-    { RARE_JOKER,     10, blueprint_brainstorm_joker_effect }, // 39 Blueprint
-    { RARE_JOKER,     10, blueprint_brainstorm_joker_effect }, // 40 Brainstorm
-    { COMMON_JOKER,    5, raised_fist_joker_effect          }, // 41
-    { COMMON_JOKER,    4, smiley_face_joker_effect          }, // 42
-    { UNCOMMON_JOKER,  6, acrobat_joker_effect              }, // 43
-    { UNCOMMON_JOKER,  5, dusk_joker_effect                 }, // 44
-    { UNCOMMON_JOKER,  6, sock_and_buskin_joker_effect      }, // 45
-    { UNCOMMON_JOKER,  6, hack_joker_effect                 }, // 46
-    { COMMON_JOKER,    4, hanging_chad_joker_effect         }, // 47
-    { UNCOMMON_JOKER,  7, joker_effect_noop,                }, // 48 Four Fingers
-    { COMMON_JOKER,    4, scholar_joker_effect              }, // 49
-    { UNCOMMON_JOKER,  8, fibonnaci_joker_effect            }, // 50
-    { UNCOMMON_JOKER,  6, seltzer_joker_effect,             }, // 51
+    { COMMON_JOKER,    2, default_joker_effect, "Gives +4 Mult to all hands"              }, // DEFAULT_JOKER_ID = 0
+    { COMMON_JOKER,    5, greedy_joker_effect, "+3 Mult per Diamond\ncard scored"               }, // GREEDY_JOKER_ID  = 1
+    { COMMON_JOKER,    5, lusty_joker_effect, "+3 Mult per Heart card\nwhen scored"               }, // etc...  2
+    { COMMON_JOKER,    5, wrathful_joker_effect, "+3 Mult per Spade card\nwhen scored"             }, // 3
+    { COMMON_JOKER,    5, gluttonous_joker_effect, "+3 Mult per Club card\nwhen scored"           }, // 4
+    { COMMON_JOKER,    3, jolly_joker_effect, "+8 Mult if hand has a Pair\nonly once per hand"                }, // 5
+    { COMMON_JOKER,    4, zany_joker_effect, "+12 Mult if hand has 3‑of‑a‑kind\nonly once per hand"                 }, // 6
+    { COMMON_JOKER,    4, mad_joker_effect, "+10 Mult if hand has Two Pair\nonly once per hand"                  }, // 7
+    { COMMON_JOKER,    4, crazy_joker_effect, "+12 Mult if hand has Straight\nonly once per hand"                }, // 8
+    { COMMON_JOKER,    4, droll_joker_effect, "+10 Mult if hand has Flush\nonly once per hand"                }, // 9
+    { COMMON_JOKER,    3, sly_joker_effect, "+50 Chips if hand has a Pair\nonly once per hand"                  }, // 10
+    { COMMON_JOKER,    4, wily_joker_effect, "+100 Chips for 3‑of‑a‑kind\nonly once per hand"                 }, // 11
+    { COMMON_JOKER,    4, clever_joker_effect, "+80 Chips if hand has Two Pair\nonly once per hand"              }, // 12
+    { COMMON_JOKER,    4, devious_joker_effect, "+100 Chips if hand has Straight\nonly once per hand"              }, // 13 
+    { COMMON_JOKER,    4, crafty_joker_effect, "+80 Chips if hand has Flush\nonly once per hand"               }, // 14
+    { COMMON_JOKER,    5, half_joker_effect, "+20 Mult if 3 or fewer cards\nonly once per hand"                }, // 15
+    { UNCOMMON_JOKER,  8, joker_stencil_effect, "X1 Mult per empty Joker slot\nincludes this Joker"              }, // 16
+    { COMMON_JOKER,    5, photograph_joker_effect, "X2 Mult on first face card\nwhen scored"          }, // 17
+    { COMMON_JOKER,    4, walkie_talkie_joker_effect, "+10 Chips & +4 Mult per 10/4\nwhen scored"        }, // 18
+    { COMMON_JOKER,    5, banner_joker_effect, "+30 Chips per unused\nDiscard when hand played"               }, // 19
+    { UNCOMMON_JOKER,  6, blackboard_joker_effect, "X3 Mult if only Spades/Clubs\nin hand when scored"           }, // 20
+    { COMMON_JOKER,    5, mystic_summit_joker_effect, "+15 Mult when 0 discards\nremaining"        }, // 21
+    { COMMON_JOKER,    4, misprint_joker_effect, "+0–23 Random Mult per hand\nrandom value each play"             }, // 22
+    { COMMON_JOKER,    4, even_steven_joker_effect, "+4 Mult per even card\nwhen scored"          }, // 23
+    { COMMON_JOKER,    5, blue_joker_effect, "+2 Chips per card left in\ndeck when scored"                 }, // 24
+    { COMMON_JOKER,    4, odd_todd_joker_effect, "+31 Chips per odd card\nwhen scored"             }, // 25
+    { UNCOMMON_JOKER,  7, joker_effect_noop, "Straights can skip 1 rank\nwhen forming hands"              }, // 26 Shortcut
+    { COMMON_JOKER,    4, business_card_joker_effect, "1⁄2 chance +$2 per face\ncard scored"        }, // 27
+    { COMMON_JOKER,    4, scary_face_joker_effect, "+30 Chips per face card\nwhen scored"           }, // 28
+    { UNCOMMON_JOKER,  7, bootstraps_joker_effect, "+2 Mult per $5 you have\nonly once per hand"           }, // 29
+    { UNCOMMON_JOKER,  5, joker_effect_noop, "All cards count as face cards\naffects other Jokers"                 }, // 30 Pareidolia
+    { COMMON_JOKER,    6, reserved_parking_joker_effect, "50% chance per face card\n$1 if triggered"     }, // 31
+    { COMMON_JOKER,    4, abstract_joker_effect, "+3 Mult per Joker you have\nincludes this Joker"             }, // 32
+    { UNCOMMON_JOKER,  6, bull_joker_effect, "+2 Chips per $1 you have\nonly once per hand"                 }, // 33
+    { RARE_JOKER,      8, the_duo_joker_effect, "×2 Mult if hand has Pair\nonly once per hand"              }, // 34
+    { RARE_JOKER,      8, the_trio_joker_effect, "×3 Mult if hand has 3‑of‑a‑kind\nonly once per hand"             }, // 35
+    { RARE_JOKER,      8, the_family_joker_effect, "×4 Mult if hand has 4‑of‑a‑kind\nonly once per hand"           }, // 36
+    { RARE_JOKER,      8, the_order_joker_effect, "×3 Mult if hand has Straight\nonly once per hand"            }, // 37
+    { RARE_JOKER,      8, the_tribe_joker_effect, "×2 Mult if hand has Flush\nonly once per hand"            }, // 38
+    { RARE_JOKER,     10, blueprint_brainstorm_joker_effect, "Copies effect of Joker\nto its right" }, // 39 Blueprint
+    { RARE_JOKER,     10, blueprint_brainstorm_joker_effect, "Copies effect of Joker\nto its left" }, // 40 Brainstorm
+    { COMMON_JOKER,    5, raised_fist_joker_effect, "+(2 × lowest card)\nadds to Mult"          }, // 41
+    { COMMON_JOKER,    4, smiley_face_joker_effect, "+5 Mult per face card\nwhen scored"          }, // 42
+    { UNCOMMON_JOKER,  6, acrobat_joker_effect, "×3 Mult on final hand\nof the round"              }, // 43
+    { UNCOMMON_JOKER,  5, dusk_joker_effect, "Retriggers all played cards\nin final hand of round"                 }, // 44
+    { UNCOMMON_JOKER,  6, sock_and_buskin_joker_effect, "Retrigger all played face cards\nwhen scored"      }, // 45
+    { UNCOMMON_JOKER,  6, hack_joker_effect, "Retriggers cards rank 2–5\nwhen scored"                 }, // 46
+    { COMMON_JOKER,    4, hanging_chad_joker_effect, "Retriggers first scored card\n2 extra times"         }, // 47
+    { UNCOMMON_JOKER,  7, joker_effect_noop, "Flushes & Straights work with 4\ncards instead of 5"                }, // 48 Four Fingers
+    { COMMON_JOKER,    4, scholar_joker_effect, "+20 Chips per Ace\nand +4 Mult when scored"              }, // 49
+    { UNCOMMON_JOKER,  8, fibonnaci_joker_effect, "+8 Mult per Ace,2,3,5,8\nwhen scored"            }, // 50
+    { UNCOMMON_JOKER,  6, seltzer_joker_effect, "Retriggers played cards\nfor next 10 hands"            }, // 51
     
     // The following jokers don't have sprites yet,
     // uncomment them when their sprites are added.
