@@ -1,5 +1,6 @@
 var dir_b2f33c71d4aa5e7af42a1ca61ff5af1b =
 [
+    [ "game", "dir_9ea5017e8fa7189fb9af6fe82af05461.html", "dir_9ea5017e8fa7189fb9af6fe82af05461" ],
     [ "affine_background.c", "affine__background_8c_source.html", null ],
     [ "audio_utils.c", "audio__utils_8c_source.html", null ],
     [ "bitset.c", "bitset_8c_source.html", null ],

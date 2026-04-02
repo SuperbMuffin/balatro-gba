@@ -110,233 +110,233 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;blind.h&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="button_8h.html">button.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;card.h&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="graphic__utils_8h.html">graphic_utils.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;hand_analysis.h&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;joker.h&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="list_8h.html">list.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="selection__grid_8h.html">selection_grid.h</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;soundbank.h&quot;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="splash__screen_8h.html">splash_screen.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="sprite_8h.html">sprite.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;tonc_memdef.h&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;maxmod.h&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define STRAIGHT_AND_FLUSH_SIZE_FOUR_FINGERS 4</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define STRAIGHT_AND_FLUSH_SIZE_DEFAULT      5</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// Pixel sizes</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define ITEM_SHOP_Y               71</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define ROUND_END_REWARD_AMOUNT_X 168</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define ROUND_END_REWARD_TEXT_X   88</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#define SCORED_CARD_TEXT_Y        48</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// SE sizes</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#define ROUND_END_BLACK_PANEL_INIT_BOTTOM_SE 12</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#define MAIN_MENU_BUTTONS             2</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#define MAIN_MENU_IMPLEMENTED_BUTTONS 1 </span><span class="comment">// Remove this once all buttons are implemented</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#define MAIN_MENU_PLAY_BTN_IDX        0</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// TODO: Properly define and use</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#define MENU_POP_OUT_ANIM_FRAMES 20</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#define GAME_OVER_ANIM_FRAMES    15</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#define SHOP_LIGHTS_1_CLR 0xFFFF</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#define SHOP_LIGHTS_2_CLR 0x32BE</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#define SHOP_LIGHTS_3_CLR 0x4B5F</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define SHOP_LIGHTS_4_CLR 0x5F9F</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define PITCH_STEP_DISCARD_SFX   (-64)</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define PITCH_STEP_DRAW_SFX      24</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define PITCH_STEP_UNDISCARD_SFX 2 * PITCH_STEP_DRAW_SFX</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#define STARTING_ROUND 0</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#define STARTING_ANTE  1</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#define STARTING_MONEY 4</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#define STARTING_SCORE 0</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#define CARD_FOCUSED_UNSEL_Y 10</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#define CARD_UNFOCUSED_SEL_Y 15</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#define CARD_FOCUSED_SEL_Y   20</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// Timer defs</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#define TM_ZERO                         0</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#define TM_RESET_STATIC_VARS            30</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#define TM_END_POP_MENU_ANIM            13</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#define TM_START_ROUND_END_REWARDS_ANIM 1</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#define TM_END_DISPLAY_FIN_BLIND        30</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#define TM_END_DISPLAY_SCORE_MIN        4</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#define TM_REWARDS_ELLIPSIS_PRINT_START 2</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#define TM_REWARDS_ELLIPSIS_PRINT_END   16</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#define TM_REWARD_DISPLAY_INTERVAL      15</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#define TM_DISPLAY_REWARDS_CONT_WAIT    (TM_REWARDS_ELLIPSIS_PRINT_END + TM_REWARD_DISPLAY_INTERVAL)</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#define TM_HAND_REWARD_INCR_WAIT        (TM_DISPLAY_REWARDS_CONT_WAIT + TM_REWARD_DISPLAY_INTERVAL)</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#define TM_REWARD_INCREMENT_INTERVAL    20</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#define TM_DISMISS_ROUND_END_TM         20</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#define TM_CREATE_SHOP_ITEMS_WAIT       1</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#define TM_SHIFT_SHOP_ICON_WAIT         7</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#define TM_END_GAME_SHOP_INTRO          12</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#define TM_SHOP_PRC_INPUT_START         1</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#define TM_DISP_BLIND_PANEL_FINISH      7</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#define TM_DISP_BLIND_PANEL_START       1</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#define TM_BLIND_SELECT_START           1</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#define TM_END_ANIM_SEQ                 12</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// TODO: Rename &quot;PID&quot; to &quot;PAL_IDX&quot;</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">// Palette IDs</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#define BOSS_BLIND_PRIMARY_PID               1</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#define MAIN_MENU_PLAY_BUTTON_OUTLINE_PID    2</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#define REROLL_BTN_PID                       3</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#define BLIND_SKIP_BTN_PID                   5</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#define MAIN_MENU_PLAY_BUTTON_MAIN_COLOR_PID 5</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#define NEXT_ROUND_BTN_SELECTED_BORDER_PID   5</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#define BLIND_BG_SHADOW_PID                  5</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#define SHOP_PANEL_SHADOW_PID                6</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#define BOSS_BLIND_SHADOW_PID                7</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#define REROLL_BTN_SELECTED_BORDER_PID       7</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#define SHOP_LIGHTS_1_PID                    8</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#define BLIND_SKIP_BTN_SELECTED_BORDER_PID   10</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#define SHOP_LIGHTS_2_PID                    14</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#define BLIND_SELECT_BTN_PID                 15</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#define NEXT_ROUND_BTN_PID                   16</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#define SHOP_LIGHTS_3_PID                    17</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#define BLIND_SELECT_BTN_SELECTED_BORDER_PID 18</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#define BLIND_BG_SECONDARY_PID               18</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#define BLIND_BG_PRIMARY_PID                 19</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#define REWARD_PANEL_BORDER_PID              19</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#define SHOP_LIGHTS_4_PID                    22</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#define SHOP_BOTTOM_PANEL_BORDER_PID         26</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#define PLAY_HAND_BTN_PID           6</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#define PLAY_HAND_BTN_BORDER_PID    7</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#define DISCARD_BTN_PID             13</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#define DISCARD_BTN_BORDER_PID      8</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#define SORT_BTNS_PID               9</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#define SORT_BY_RANK_BTN_BORDER_PID 22</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#define SORT_BY_SUIT_BTN_BORDER_PID 23</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">// Naming the stage where cards return from the discard pile to the deck &quot;undiscard&quot;</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">/* This needs to stay a power of 2 and small enough</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment"> * for the lerping to be done before the next hand is drawn.</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#define NUM_SCORE_LERP_STEPS   16</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#define TM_SCORE_LERP_INTERVAL 2</span></div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">// Shop</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#define REROLL_BASE_COST 5 </span><span class="comment">// Base cost for rerolling the shop items</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">#define NEXT_ROUND_BTN_SEL_X 0</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">#define GAME_PLAYING_HAND_SEL_Y      1</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">#define GAME_PLAYING_BUTTONS_SEL_Y   2</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">#define GAME_PLAYING_NUM_BOTTOM_BTNS 2</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">#define REROLL_BTN_FRAME_PAL_IDX 7</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">#define REROLL_BTN_PAL_IDX       3</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#define EXPIRE_ANIMATION_FRAME_COUNT 3</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#define CARD_FOCUSED_UNSEL_Y 10</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#define CARD_UNFOCUSED_SEL_Y 15</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">#define CARD_FOCUSED_SEL_Y   20</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">enum</span> GameShopStates</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    GAME_SHOP_INTRO,</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    GAME_SHOP_ACTIVE,</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    GAME_SHOP_EXIT,</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    GAME_SHOP_MAX</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>};</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="keyword">enum</span> GameRoundEndStates</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>{</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    ROUND_END_START,</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    START_EXPAND_POPUP,</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    DISPLAY_FINISHED_BLIND,</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    DISPLAY_SCORE_MIN,</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    UPDATE_BLIND_REWARD,</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    BLIND_PANEL_EXIT,</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    DISPLAY_REWARDS,</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    DISPLAY_CASHOUT,</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    DISMISS_ROUND_END_PANEL,</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    ROUND_END_EXIT</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>};</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="keyword">enum</span> BlindSelectStates</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>{</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    START_ANIM_SEQ,</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    BLIND_SELECT,</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    BLIND_SELECTED_ANIM_SEQ,</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    DISPLAY_BLIND_PANEL,</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    BLIND_SELECT_MAX</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>};</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="foldopen" id="foldopen00180" data-start="{" data-end="};">
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="structHandValues.html">  180</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>{</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    u32 chips;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    u32 mult;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordtype">char</span>* display_name;</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>} <a class="code hl_struct" href="structHandValues.html">HandValues</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="common__ui_8h.html">game/common_ui.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="graphic__utils_8h.html">graphic_utils.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;hand_analysis.h&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;joker.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="list_8h.html">list.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="selection__grid_8h.html">selection_grid.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;soundbank.h&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="splash__screen_8h.html">splash_screen.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="sprite_8h.html">sprite.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;tonc_memdef.h&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="util_8h.html">util.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;maxmod.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define STRAIGHT_AND_FLUSH_SIZE_FOUR_FINGERS 4</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define STRAIGHT_AND_FLUSH_SIZE_DEFAULT      5</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// Pixel sizes</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#define ITEM_SHOP_Y               71</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define ROUND_END_REWARD_AMOUNT_X 168</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#define ROUND_END_REWARD_TEXT_X   88</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define SCORED_CARD_TEXT_Y        48</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// SE sizes</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#define ROUND_END_BLACK_PANEL_INIT_BOTTOM_SE 12</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#define MAIN_MENU_BUTTONS             2</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#define MAIN_MENU_IMPLEMENTED_BUTTONS 1 </span><span class="comment">// Remove this once all buttons are implemented</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#define MAIN_MENU_PLAY_BTN_IDX        0</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// TODO: Properly define and use</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#define MENU_POP_OUT_ANIM_FRAMES 20</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#define GAME_OVER_ANIM_FRAMES    15</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#define SHOP_LIGHTS_1_CLR 0xFFFF</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#define SHOP_LIGHTS_2_CLR 0x32BE</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define SHOP_LIGHTS_3_CLR 0x4B5F</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define SHOP_LIGHTS_4_CLR 0x5F9F</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define PITCH_STEP_DISCARD_SFX   (-64)</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define PITCH_STEP_DRAW_SFX      24</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define PITCH_STEP_UNDISCARD_SFX 2 * PITCH_STEP_DRAW_SFX</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#define STARTING_ROUND 0</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#define STARTING_ANTE  1</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#define STARTING_MONEY 4</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#define STARTING_SCORE 0</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#define CARD_FOCUSED_UNSEL_Y 10</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#define CARD_UNFOCUSED_SEL_Y 15</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#define CARD_FOCUSED_SEL_Y   20</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// Timer defs</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#define TM_ZERO                         0</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#define TM_RESET_STATIC_VARS            30</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#define TM_END_POP_MENU_ANIM            13</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#define TM_START_ROUND_END_REWARDS_ANIM 1</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#define TM_END_DISPLAY_FIN_BLIND        30</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#define TM_END_DISPLAY_SCORE_MIN        4</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#define TM_REWARDS_ELLIPSIS_PRINT_START 2</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#define TM_REWARDS_ELLIPSIS_PRINT_END   16</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#define TM_REWARD_DISPLAY_INTERVAL      15</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#define TM_DISPLAY_REWARDS_CONT_WAIT    (TM_REWARDS_ELLIPSIS_PRINT_END + TM_REWARD_DISPLAY_INTERVAL)</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#define TM_HAND_REWARD_INCR_WAIT        (TM_DISPLAY_REWARDS_CONT_WAIT + TM_REWARD_DISPLAY_INTERVAL)</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#define TM_REWARD_INCREMENT_INTERVAL    20</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#define TM_DISMISS_ROUND_END_TM         20</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#define TM_CREATE_SHOP_ITEMS_WAIT       1</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#define TM_SHIFT_SHOP_ICON_WAIT         7</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#define TM_END_GAME_SHOP_INTRO          12</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#define TM_SHOP_PRC_INPUT_START         1</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#define TM_DISP_BLIND_PANEL_FINISH      7</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#define TM_DISP_BLIND_PANEL_START       1</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#define TM_BLIND_SELECT_START           1</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#define TM_END_ANIM_SEQ                 12</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">// TODO: Rename &quot;PID&quot; to &quot;PAL_IDX&quot;</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">// Palette IDs</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#define BOSS_BLIND_PRIMARY_PID               1</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#define MAIN_MENU_PLAY_BUTTON_OUTLINE_PID    2</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#define REROLL_BTN_PID                       3</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#define BLIND_SKIP_BTN_PID                   5</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#define MAIN_MENU_PLAY_BUTTON_MAIN_COLOR_PID 5</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#define NEXT_ROUND_BTN_SELECTED_BORDER_PID   5</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#define BLIND_BG_SHADOW_PID                  5</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#define SHOP_PANEL_SHADOW_PID                6</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#define BOSS_BLIND_SHADOW_PID                7</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#define REROLL_BTN_SELECTED_BORDER_PID       7</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#define SHOP_LIGHTS_1_PID                    8</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#define BLIND_SKIP_BTN_SELECTED_BORDER_PID   10</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#define SHOP_LIGHTS_2_PID                    14</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#define BLIND_SELECT_BTN_PID                 15</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#define NEXT_ROUND_BTN_PID                   16</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#define SHOP_LIGHTS_3_PID                    17</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#define BLIND_SELECT_BTN_SELECTED_BORDER_PID 18</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#define BLIND_BG_SECONDARY_PID               18</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#define BLIND_BG_PRIMARY_PID                 19</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#define REWARD_PANEL_BORDER_PID              19</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#define SHOP_LIGHTS_4_PID                    22</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#define SHOP_BOTTOM_PANEL_BORDER_PID         26</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#define PLAY_HAND_BTN_PID           6</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#define PLAY_HAND_BTN_BORDER_PID    7</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#define DISCARD_BTN_PID             13</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#define DISCARD_BTN_BORDER_PID      8</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#define SORT_BTNS_PID               9</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#define SORT_BY_RANK_BTN_BORDER_PID 22</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#define SORT_BY_SUIT_BTN_BORDER_PID 23</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment">// Naming the stage where cards return from the discard pile to the deck &quot;undiscard&quot;</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">/* This needs to stay a power of 2 and small enough</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment"> * for the lerping to be done before the next hand is drawn.</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#define NUM_SCORE_LERP_STEPS   16</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#define TM_SCORE_LERP_INTERVAL 2</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">// Shop</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">#define REROLL_BASE_COST 5 </span><span class="comment">// Base cost for rerolling the shop items</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#define NEXT_ROUND_BTN_SEL_X 0</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">#define GAME_PLAYING_HAND_SEL_Y      1</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">#define GAME_PLAYING_BUTTONS_SEL_Y   2</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">#define GAME_PLAYING_NUM_BOTTOM_BTNS 2</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">#define REROLL_BTN_FRAME_PAL_IDX 7</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">#define REROLL_BTN_PAL_IDX       3</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">#define EXPIRE_ANIMATION_FRAME_COUNT 3</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#define CARD_FOCUSED_UNSEL_Y 10</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">#define CARD_UNFOCUSED_SEL_Y 15</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#define CARD_FOCUSED_SEL_Y   20</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keyword">enum</span> GameShopStates</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>{</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    GAME_SHOP_INTRO,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    GAME_SHOP_ACTIVE,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    GAME_SHOP_EXIT,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    GAME_SHOP_MAX</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>};</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keyword">enum</span> GameRoundEndStates</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>{</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    ROUND_END_START,</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    START_EXPAND_POPUP,</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    DISPLAY_FINISHED_BLIND,</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    DISPLAY_SCORE_MIN,</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    UPDATE_BLIND_REWARD,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    BLIND_PANEL_EXIT,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    DISPLAY_REWARDS,</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    DISPLAY_CASHOUT,</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    DISMISS_ROUND_END_PANEL,</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    ROUND_END_EXIT</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>};</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="keyword">enum</span> BlindSelectStates</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>{</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    START_ANIM_SEQ,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    BLIND_SELECT,</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    BLIND_SELECTED_ANIM_SEQ,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    DISPLAY_BLIND_PANEL,</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    BLIND_SELECT_MAX</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>};</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="foldopen" id="foldopen00181" data-start="{" data-end="};">
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="structHandValues.html">  181</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>{</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    u32 chips;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    u32 mult;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordtype">char</span>* display_name;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>} <a class="code hl_struct" href="structHandValues.html">HandValues</a>;</div>
 </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">// Used as a No Operation for game states that have no init and/or exit function.</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">// ricfehr3 did the work of determining whether a noop or a NULL check was more</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">// efficient. Well, this is the answer.</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">// Thanks!</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">// https://github.com/cellos51/balatro-gba/issues/137#issuecomment-3322485129</span></div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keyword">static</span> <span class="keywordtype">void</span> noop(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars)</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>{</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>}</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">// These functions need to be forward declared</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">// so they&#39;re visible to the state_info array,</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">// and the sub-state function tables.</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">// This could be done, and maybe should be done,</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">// with an X macro, but I&#39;ll leave that to the</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment">// reviewer(s).</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_main_menu_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_main_menu_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_playing_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_on_exit(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_on_exit(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_on_exit(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_lose_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_lose_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_over_on_exit(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_win_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_win_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_intro(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_process_user_input(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_outro(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_start_anim_seq(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_handle_input(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_selected_anim_seq(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_display_blind_panel(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">static</span> Rect game_blind_select_get_req_score_rect(<span class="keyword">enum</span> BlindType blind);</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_print_blinds_reqs_and_rewards(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_start(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_start_expand_popup(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_display_finished_blind(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_display_score_min(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_update_blind_reward(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_panel_exit(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_display_rewards(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_display_cashout(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_dismiss_round_end_panel(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="keyword">static</span> <span class="keywordtype">void</span> sort_cards(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="keyword">static</span> <span class="keywordtype">void</span> change_background(<span class="keyword">enum</span> BackgroundId <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">// Used as a No Operation for game states that have no init and/or exit function.</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">// ricfehr3 did the work of determining whether a noop or a NULL check was more</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">// efficient. Well, this is the answer.</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">// Thanks!</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">// https://github.com/cellos51/balatro-gba/issues/137#issuecomment-3322485129</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keyword">static</span> <span class="keywordtype">void</span> noop(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars)</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>{</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">// These functions need to be forward declared</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">// so they&#39;re visible to the state_info array,</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">// and the sub-state function tables.</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">// This could be done, and maybe should be done,</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment">// with an X macro, but I&#39;ll leave that to the</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment">// reviewer(s).</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_main_menu_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_main_menu_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_playing_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_on_exit(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_on_exit(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_on_exit(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_lose_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_lose_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_over_on_exit(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_win_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_win_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_intro(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_process_user_input(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_outro(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_start_anim_seq(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_handle_input(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_selected_anim_seq(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_display_blind_panel(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keyword">static</span> Rect game_blind_select_get_req_score_rect(<span class="keyword">enum</span> BlindType blind);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_print_blinds_reqs_and_rewards(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_start(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_start_expand_popup(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_display_finished_blind(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_display_score_min(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_update_blind_reward(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_panel_exit(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_display_rewards(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_display_cashout(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_round_end_dismiss_round_end_panel(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="keyword">static</span> <span class="keywordtype">void</span> sort_cards(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="keyword">static</span> <span class="keywordtype">void</span> display_temp_score(u32 value);</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="keyword">static</span> <span class="keywordtype">void</span> display_score(u32 value);</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keyword">static</span> <span class="keywordtype">void</span> check_flaming_score(<span class="keywordtype">void</span>);</div>
@@ -537,7 +537,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span><span class="comment">// BY DEFAULT IS SET TO 1, but if changed to 2 or more, should speed up all (or most) of the game</span></div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span><span class="comment">// aspects that should be sped up by speed, as in the original game.</span></div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span><span class="keyword">static</span> <span class="keywordtype">int</span> game_speed = 1;</div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span><span class="keyword">static</span> <span class="keyword">enum</span> BackgroundId background = BG_NONE;</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span><span class="keyword">static</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="common__ui_8h.html#aa1dc226c31d41c9cb14cdf9e2551c5cd">BackgroundId</a> background = BG_NONE;</div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span><span class="keyword">static</span> <a class="code hl_struct" href="structStateInfo.html">StateInfo</a> state_info[] = {</div>
 <div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span><span class="preprocessor">#define DEF_STATE_INFO(stateEnum, init_fn, update_fn, exit_fn) \</span></div>
@@ -1525,7 +1525,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>    <a class="code hl_function" href="graphic__utils_8h.html#a15d8306ebc638d56bf6debc2f2c18a52">main_bg_se_copy_rect</a>(TOP_LEFT_PANEL_BOTTOM_ROW_RESET_RECT, top_left_panel_bottom_row_pos);</div>
 <div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>}</div>
 <div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span> </div>
-<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span><span class="keyword">static</span> <span class="keywordtype">void</span> change_background(<span class="keyword">enum</span> BackgroundId <span class="keywordtype">id</span>)</div>
+<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span><span class="keywordtype">void</span> change_background_legacy(<span class="keyword">enum</span> <a class="code hl_enumeration" href="common__ui_8h.html#aa1dc226c31d41c9cb14cdf9e2551c5cd">BackgroundId</a> <span class="keywordtype">id</span>)</div>
 <div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>{</div>
 <div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>    <span class="keywordflow">if</span> (background == <span class="keywordtype">id</span>)</div>
 <div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>    {</div>
@@ -1598,7 +1598,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>    {</div>
 <div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>        <span class="keywordflow">if</span> (background != BG_CARD_SELECTING)</div>
 <div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>        {</div>
-<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>            change_background(BG_CARD_SELECTING);</div>
+<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>            <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_CARD_SELECTING);</div>
 <div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>            background = BG_CARD_PLAYING;</div>
 <div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>        }</div>
 <div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span> </div>
@@ -1616,7 +1616,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>    {</div>
 <div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span>        <span class="keywordflow">if</span> (background != BG_CARD_SELECTING &amp;&amp; background != BG_CARD_PLAYING)</div>
 <div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>        {</div>
-<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>            change_background(BG_CARD_SELECTING);</div>
+<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>            <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_CARD_SELECTING);</div>
 <div class="line"><a id="l01519" name="l01519"></a><span class="lineno"> 1519</span>            background = BG_ROUND_END;</div>
 <div class="line"><a id="l01520" name="l01520"></a><span class="lineno"> 1520</span>        }</div>
 <div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span> </div>
@@ -2085,7 +2085,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l01984" name="l01984"></a><span class="lineno"> 1984</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_main_menu_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars)</div>
 <div class="line"><a id="l01985" name="l01985"></a><span class="lineno"> 1985</span>{</div>
 <div class="line"><a id="l01986" name="l01986"></a><span class="lineno"> 1986</span>    <a class="code hl_function" href="affine__background_8h.html#aa6cd0433282441f6df3317b595fef90a">affine_background_change_background</a>(<a class="code hl_enumvalue" href="affine__background_8h.html#a7be0cf280b30b6df358b84c785a35e64af587868d89c48c5bce509f8f5bda7677">AFFINE_BG_MAIN_MENU</a>);</div>
-<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span>    change_background(BG_MAIN_MENU);</div>
+<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span>    <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_MAIN_MENU);</div>
 <div class="line"><a id="l01988" name="l01988"></a><span class="lineno"> 1988</span>    main_menu_ace = card_object_new(card_new(SPADES, ACE));</div>
 <div class="line"><a id="l01989" name="l01989"></a><span class="lineno"> 1989</span>    card_object_set_sprite(main_menu_ace, 0); <span class="comment">// Set the sprite for the ace of spades</span></div>
 <div class="line"><a id="l01990" name="l01990"></a><span class="lineno"> 1990</span>    main_menu_ace-&gt;sprite_object-&gt;<a class="code hl_variable" href="structSpriteObject.html#a7c54302f990f134ca6e37a2e9ef9999d">sprite</a>-&gt;<a class="code hl_variable" href="structSprite.html#abdcca0516e817f6f84009b3ace44c495">obj</a>-&gt;attr0 |=</div>
@@ -3300,7 +3300,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l03205" name="l03205"></a><span class="lineno"> 3205</span>    {</div>
 <div class="line"><a id="l03206" name="l03206"></a><span class="lineno"> 3206</span>        <span class="comment">// Change the background to the round end background. This is how it works in Balatro, so</span></div>
 <div class="line"><a id="l03207" name="l03207"></a><span class="lineno"> 3207</span>        <span class="comment">// I&#39;m doing it this way too.</span></div>
-<div class="line"><a id="l03208" name="l03208"></a><span class="lineno"> 3208</span>        change_background(BG_ROUND_END);</div>
+<div class="line"><a id="l03208" name="l03208"></a><span class="lineno"> 3208</span>        <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_ROUND_END);</div>
 <div class="line"><a id="l03209" name="l03209"></a><span class="lineno"> 3209</span> </div>
 <div class="line"><a id="l03210" name="l03210"></a><span class="lineno"> 3210</span>        <span class="comment">// We take each discarded card and put it back into the deck with a short animation</span></div>
 <div class="line"><a id="l03211" name="l03211"></a><span class="lineno"> 3211</span>        <span class="keyword">static</span> <a class="code hl_struct" href="structCardObject.html">CardObject</a>* discarded_card_object = NULL;</div>
@@ -3585,11 +3585,11 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l03490" name="l03490"></a><span class="lineno"> 3490</span>    <span class="comment">// Background logic (thissss might be moved to the card&#39;ssss logic later. I&#39;m a sssssnake)</span></div>
 <div class="line"><a id="l03491" name="l03491"></a><span class="lineno"> 3491</span>    <span class="keywordflow">if</span> (hand_state == HAND_DRAW || hand_state == HAND_DISCARD || hand_state == HAND_SELECT)</div>
 <div class="line"><a id="l03492" name="l03492"></a><span class="lineno"> 3492</span>    {</div>
-<div class="line"><a id="l03493" name="l03493"></a><span class="lineno"> 3493</span>        change_background(BG_CARD_SELECTING);</div>
+<div class="line"><a id="l03493" name="l03493"></a><span class="lineno"> 3493</span>        <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_CARD_SELECTING);</div>
 <div class="line"><a id="l03494" name="l03494"></a><span class="lineno"> 3494</span>    }</div>
 <div class="line"><a id="l03495" name="l03495"></a><span class="lineno"> 3495</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hand_state != HAND_SHUFFLING)</div>
 <div class="line"><a id="l03496" name="l03496"></a><span class="lineno"> 3496</span>    {</div>
-<div class="line"><a id="l03497" name="l03497"></a><span class="lineno"> 3497</span>        change_background(BG_CARD_PLAYING);</div>
+<div class="line"><a id="l03497" name="l03497"></a><span class="lineno"> 3497</span>        <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_CARD_PLAYING);</div>
 <div class="line"><a id="l03498" name="l03498"></a><span class="lineno"> 3498</span>    }</div>
 <div class="line"><a id="l03499" name="l03499"></a><span class="lineno"> 3499</span> </div>
 <div class="line"><a id="l03500" name="l03500"></a><span class="lineno"> 3500</span>    game_playing_process_input_and_state();</div>
@@ -3648,7 +3648,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l03553" name="l03553"></a><span class="lineno"> 3553</span>    <span class="comment">// Reset static variables to default values upon re-entering the round end state</span></div>
 <div class="line"><a id="l03554" name="l03554"></a><span class="lineno"> 3554</span>    <span class="keywordflow">if</span> (timer == TM_RESET_STATIC_VARS)</div>
 <div class="line"><a id="l03555" name="l03555"></a><span class="lineno"> 3555</span>    {</div>
-<div class="line"><a id="l03556" name="l03556"></a><span class="lineno"> 3556</span>        change_background(BG_ROUND_END); <span class="comment">// Change the background to the round end background</span></div>
+<div class="line"><a id="l03556" name="l03556"></a><span class="lineno"> 3556</span>        <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_ROUND_END); <span class="comment">// Change the background to the round end background</span></div>
 <div class="line"><a id="l03557" name="l03557"></a><span class="lineno"> 3557</span>        state_info[game_state].substate = START_EXPAND_POPUP; <span class="comment">// Change the state to the next one</span></div>
 <div class="line"><a id="l03558" name="l03558"></a><span class="lineno"> 3558</span>        timer = TM_ZERO;                                      <span class="comment">// Reset the timer</span></div>
 <div class="line"><a id="l03559" name="l03559"></a><span class="lineno"> 3559</span>        blind_reward = blind_get_reward(current_blind);</div>
@@ -4569,7 +4569,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l04474" name="l04474"></a><span class="lineno"> 4474</span> </div>
 <div class="line"><a id="l04475" name="l04475"></a><span class="lineno"> 4475</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_shop_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars)</div>
 <div class="line"><a id="l04476" name="l04476"></a><span class="lineno"> 4476</span>{</div>
-<div class="line"><a id="l04477" name="l04477"></a><span class="lineno"> 4477</span>    change_background(BG_SHOP);</div>
+<div class="line"><a id="l04477" name="l04477"></a><span class="lineno"> 4477</span>    <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_SHOP);</div>
 <div class="line"><a id="l04478" name="l04478"></a><span class="lineno"> 4478</span> </div>
 <div class="line"><a id="l04479" name="l04479"></a><span class="lineno"> 4479</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="list_8h.html#a1269841dad103a70c861ef88e1bbf9e0">list_is_empty</a>(&amp;_shop_jokers_list))</div>
 <div class="line"><a id="l04480" name="l04480"></a><span class="lineno"> 4480</span>    {</div>
@@ -4622,7 +4622,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l04527" name="l04527"></a><span class="lineno"> 4527</span> </div>
 <div class="line"><a id="l04528" name="l04528"></a><span class="lineno"> 4528</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_blind_select_on_init(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars)</div>
 <div class="line"><a id="l04529" name="l04529"></a><span class="lineno"> 4529</span>{</div>
-<div class="line"><a id="l04530" name="l04530"></a><span class="lineno"> 4530</span>    change_background(BG_BLIND_SELECT);</div>
+<div class="line"><a id="l04530" name="l04530"></a><span class="lineno"> 4530</span>    <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_BLIND_SELECT);</div>
 <div class="line"><a id="l04531" name="l04531"></a><span class="lineno"> 4531</span>    selection_x = 0;</div>
 <div class="line"><a id="l04532" name="l04532"></a><span class="lineno"> 4532</span>    selection_y = 0;</div>
 <div class="line"><a id="l04533" name="l04533"></a><span class="lineno"> 4533</span> </div>
@@ -4793,7 +4793,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l04698" name="l04698"></a><span class="lineno"> 4698</span>            selection_y = 0; <span class="comment">// Reset selection to first option</span></div>
 <div class="line"><a id="l04699" name="l04699"></a><span class="lineno"> 4699</span> </div>
 <div class="line"><a id="l04700" name="l04700"></a><span class="lineno"> 4700</span>            background = UNDEFINED; <span class="comment">// Force refresh of the background</span></div>
-<div class="line"><a id="l04701" name="l04701"></a><span class="lineno"> 4701</span>            change_background(BG_BLIND_SELECT);</div>
+<div class="line"><a id="l04701" name="l04701"></a><span class="lineno"> 4701</span>            <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_BLIND_SELECT);</div>
 <div class="line"><a id="l04702" name="l04702"></a><span class="lineno"> 4702</span> </div>
 <div class="line"><a id="l04703" name="l04703"></a><span class="lineno"> 4703</span>            <span class="comment">// TODO: Create a generic vertical move by any number of tiles to avoid for loops?</span></div>
 <div class="line"><a id="l04704" name="l04704"></a><span class="lineno"> 4704</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 12; i++)</div>
@@ -4876,7 +4876,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l04781" name="l04781"></a><span class="lineno"> 4781</span>    <span class="comment">// Switches to the selecting background and clears the blind panel area</span></div>
 <div class="line"><a id="l04782" name="l04782"></a><span class="lineno"> 4782</span>    <span class="keywordflow">if</span> (timer == TM_DISP_BLIND_PANEL_START)</div>
 <div class="line"><a id="l04783" name="l04783"></a><span class="lineno"> 4783</span>    {</div>
-<div class="line"><a id="l04784" name="l04784"></a><span class="lineno"> 4784</span>        change_background(BG_CARD_SELECTING);</div>
+<div class="line"><a id="l04784" name="l04784"></a><span class="lineno"> 4784</span>        <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_CARD_SELECTING);</div>
 <div class="line"><a id="l04785" name="l04785"></a><span class="lineno"> 4785</span> </div>
 <div class="line"><a id="l04786" name="l04786"></a><span class="lineno"> 4786</span>        <a class="code hl_function" href="graphic__utils_8h.html#a0d3636aed3d1c8e40b6001e839684912">main_bg_se_clear_rect</a>(ROUND_END_MENU_RECT);</div>
 <div class="line"><a id="l04787" name="l04787"></a><span class="lineno"> 4787</span> </div>
@@ -4931,7 +4931,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l04836" name="l04836"></a><span class="lineno"> 4836</span>        }</div>
 <div class="line"><a id="l04837" name="l04837"></a><span class="lineno"> 4837</span>    }</div>
 <div class="line"><a id="l04838" name="l04838"></a><span class="lineno"> 4838</span> </div>
-<div class="line"><a id="l04839" name="l04839"></a><span class="lineno"> 4839</span>    change_background(BG_BLIND_SELECT);</div>
+<div class="line"><a id="l04839" name="l04839"></a><span class="lineno"> 4839</span>    <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_BLIND_SELECT);</div>
 <div class="line"><a id="l04840" name="l04840"></a><span class="lineno"> 4840</span> </div>
 <div class="line"><a id="l04841" name="l04841"></a><span class="lineno"> 4841</span>    <span class="comment">// Deck size/max size</span></div>
 <div class="line"><a id="l04842" name="l04842"></a><span class="lineno"> 4842</span>    <a class="code hl_function" href="graphic__utils_8h.html#a86fe19f87df82284e96d7e8aacb001d7">tte_erase_rect_wrapper</a>(DECK_SIZE_RECT);</div>
@@ -4970,7 +4970,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="line"><a id="l04875" name="l04875"></a><span class="lineno"> 4875</span> </div>
 <div class="line"><a id="l04876" name="l04876"></a><span class="lineno"> 4876</span><span class="keyword">static</span> <span class="keywordtype">void</span> game_main_menu_on_update(<a class="code hl_struct" href="structGameVariables.html">GameVariables</a>* vars)</div>
 <div class="line"><a id="l04877" name="l04877"></a><span class="lineno"> 4877</span>{</div>
-<div class="line"><a id="l04878" name="l04878"></a><span class="lineno"> 4878</span>    change_background(BG_MAIN_MENU);</div>
+<div class="line"><a id="l04878" name="l04878"></a><span class="lineno"> 4878</span>    <a class="code hl_function" href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a>(BG_MAIN_MENU);</div>
 <div class="line"><a id="l04879" name="l04879"></a><span class="lineno"> 4879</span> </div>
 <div class="line"><a id="l04880" name="l04880"></a><span class="lineno"> 4880</span>    card_object_update(main_menu_ace);</div>
 <div class="line"><a id="l04881" name="l04881"></a><span class="lineno"> 4881</span>    main_menu_ace-&gt;sprite_object-&gt;<a class="code hl_variable" href="structSpriteObject.html#a5da2ef686423fa4bcc6f39c2416e0039">trotation</a> = lu_sin((timer &lt;&lt; 8) / 2) / 3;</div>
@@ -5143,6 +5143,9 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="ttc" id="abutton_8h_html"><div class="ttname"><a href="button_8h.html">button.h</a></div><div class="ttdoc">A button structure containing the common button functionalities.</div></div>
 <div class="ttc" id="abutton_8h_html_a071a4d1bf72a16a7f4a4153722ce36db"><div class="ttname"><a href="button_8h.html#a071a4d1bf72a16a7f4a4153722ce36db">button_press</a></div><div class="ttdeci">void button_press(Button *button)</div><div class="ttdoc">Execute a button press, by calling the button's on_pressed function. This checks the button's can_be_...</div><div class="ttdef"><b>Definition</b> <a href="button_8c_source.html#l00018">button.c:18</a></div></div>
 <div class="ttc" id="abutton_8h_html_ab07bc69b92e6642e2b986debfb152e48"><div class="ttname"><a href="button_8h.html#ab07bc69b92e6642e2b986debfb152e48">button_set_highlight</a></div><div class="ttdeci">void button_set_highlight(Button *button, bool highlight)</div><div class="ttdoc">Set the button highlight on or off.</div><div class="ttdef"><b>Definition</b> <a href="button_8c_source.html#l00008">button.c:8</a></div></div>
+<div class="ttc" id="acommon__ui_8h_html"><div class="ttname"><a href="common__ui_8h.html">common_ui.h</a></div><div class="ttdoc">Common functions to render UI elements.</div></div>
+<div class="ttc" id="acommon__ui_8h_html_a26dbe6146af9c787401916eb0f44acd6"><div class="ttname"><a href="common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6">change_background</a></div><div class="ttdeci">void change_background(enum BackgroundId id)</div><div class="ttdef"><b>Definition</b> <a href="common__ui_8c_source.html#l00019">common_ui.c:19</a></div></div>
+<div class="ttc" id="acommon__ui_8h_html_aa1dc226c31d41c9cb14cdf9e2551c5cd"><div class="ttname"><a href="common__ui_8h.html#aa1dc226c31d41c9cb14cdf9e2551c5cd">BackgroundId</a></div><div class="ttdeci">BackgroundId</div><div class="ttdoc">Enum of possible backgrounds to render with change_background.</div><div class="ttdef"><b>Definition</b> <a href="common__ui_8h_source.html#l00012">common_ui.h:13</a></div></div>
 <div class="ttc" id="agraphic__utils_8h_html"><div class="ttname"><a href="graphic__utils_8h.html">graphic_utils.h</a></div><div class="ttdoc">Graphic utility functions.</div></div>
 <div class="ttc" id="agraphic__utils_8h_html_a009e80504b0e743e2c4e77de9d32fcd4"><div class="ttname"><a href="graphic__utils_8h.html#a009e80504b0e743e2c4e77de9d32fcd4">main_bg_se_move_rect_1_tile_vert</a></div><div class="ttdeci">void main_bg_se_move_rect_1_tile_vert(Rect se_rect, enum ScreenVertDir direction)</div><div class="ttdoc">Moves a rect in the main background vertically in direction by a single tile.</div><div class="ttdef"><b>Definition</b> <a href="graphic__utils_8c_source.html#l00120">graphic_utils.c:120</a></div></div>
 <div class="ttc" id="agraphic__utils_8h_html_a06ee61cf542dc9bb5885fbf5a6b6e17d"><div class="ttname"><a href="graphic__utils_8h.html#a06ee61cf542dc9bb5885fbf5a6b6e17d">rect_height</a></div><div class="ttdeci">INLINE int rect_height(const Rect *rect)</div><div class="ttdoc">Get the height of a rectangle.</div><div class="ttdef"><b>Definition</b> <a href="graphic__utils_8h_source.html#l00171">graphic_utils.h:171</a></div></div>
@@ -5185,9 +5188,9 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="ttc" id="astructButton_html"><div class="ttname"><a href="structButton.html">Button</a></div><div class="ttdoc">A button representation.</div><div class="ttdef"><b>Definition</b> <a href="button_8h_source.html#l00029">button.h:30</a></div></div>
 <div class="ttc" id="astructCardObject_html"><div class="ttname"><a href="structCardObject.html">CardObject</a></div><div class="ttdef"><b>Definition</b> <a href="card_8h_source.html#l00050">card.h:51</a></div></div>
 <div class="ttc" id="astructCard_html"><div class="ttname"><a href="structCard.html">Card</a></div><div class="ttdef"><b>Definition</b> <a href="card_8h_source.html#l00044">card.h:45</a></div></div>
-<div class="ttc" id="astructContainedHandTypes_html"><div class="ttname"><a href="structContainedHandTypes.html">ContainedHandTypes</a></div><div class="ttdef"><b>Definition</b> <a href="game_8h_source.html#l00108">game.h:109</a></div></div>
+<div class="ttc" id="astructContainedHandTypes_html"><div class="ttname"><a href="structContainedHandTypes.html">ContainedHandTypes</a></div><div class="ttdef"><b>Definition</b> <a href="game_8h_source.html#l00098">game.h:99</a></div></div>
 <div class="ttc" id="astructGameVariables_html"><div class="ttname"><a href="structGameVariables.html">GameVariables</a></div><div class="ttdoc">A central location for all game variables.</div><div class="ttdef"><b>Definition</b> <a href="game__variables_8h_source.html#l00015">game_variables.h:16</a></div></div>
-<div class="ttc" id="astructHandValues_html"><div class="ttname"><a href="structHandValues.html">HandValues</a></div><div class="ttdef"><b>Definition</b> <a href="game_8c_source.html#l00180">game.c:181</a></div></div>
+<div class="ttc" id="astructHandValues_html"><div class="ttname"><a href="structHandValues.html">HandValues</a></div><div class="ttdef"><b>Definition</b> <a href="game_8c_source.html#l00181">game.c:182</a></div></div>
 <div class="ttc" id="astructJokerInfo_html"><div class="ttname"><a href="structJokerInfo.html">JokerInfo</a></div><div class="ttdef"><b>Definition</b> <a href="joker_8h_source.html#l00136">joker.h:137</a></div></div>
 <div class="ttc" id="astructJokerObject_html"><div class="ttname"><a href="structJokerObject.html">JokerObject</a></div><div class="ttdef"><b>Definition</b> <a href="joker_8h_source.html#l00107">joker.h:108</a></div></div>
 <div class="ttc" id="astructListItr_html"><div class="ttname"><a href="structListItr.html">ListItr</a></div><div class="ttdoc">An iterator into a list.</div><div class="ttdef"><b>Definition</b> <a href="list_8h_source.html#l00083">list.h:84</a></div></div>
@@ -5203,7 +5206,7 @@ $(document).ready(function(){initNavTree('game_8c_source.html',''); initResizabl
 <div class="ttc" id="astructSpriteObject_html_a9fac583aa7e114c134394f42e81e4253"><div class="ttname"><a href="structSpriteObject.html#a9fac583aa7e114c134394f42e81e4253">SpriteObject::tscale</a></div><div class="ttdeci">FIXED tscale</div><div class="ttdoc">Target Scale.</div><div class="ttdef"><b>Definition</b> <a href="sprite_8h_source.html#l00079">sprite.h:79</a></div></div>
 <div class="ttc" id="astructSprite_html"><div class="ttname"><a href="structSprite.html">Sprite</a></div><div class="ttdoc">Sprite struct for GBA hardware specifics.</div><div class="ttdef"><b>Definition</b> <a href="sprite_8h_source.html#l00028">sprite.h:29</a></div></div>
 <div class="ttc" id="astructSprite_html_abdcca0516e817f6f84009b3ace44c495"><div class="ttname"><a href="structSprite.html#abdcca0516e817f6f84009b3ace44c495">Sprite::obj</a></div><div class="ttdeci">OBJ_ATTR * obj</div><div class="ttdoc">GBA sprite attribute registers info (A0-A2)</div><div class="ttdef"><b>Definition</b> <a href="sprite_8h_source.html#l00033">sprite.h:33</a></div></div>
-<div class="ttc" id="astructStateInfo_html"><div class="ttname"><a href="structStateInfo.html">StateInfo</a></div><div class="ttdef"><b>Definition</b> <a href="game_8h_source.html#l00136">game.h:137</a></div></div>
+<div class="ttc" id="astructStateInfo_html"><div class="ttname"><a href="structStateInfo.html">StateInfo</a></div><div class="ttdef"><b>Definition</b> <a href="game_8h_source.html#l00126">game.h:127</a></div></div>
 <div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div><div class="ttdoc">Utilities relating around number string representation and protected arithmatic helper functions.</div></div>
 <div class="ttc" id="autil_8h_html_a1ad066a26dc9475293bfea55b96973ca"><div class="ttname"><a href="util_8h.html#a1ad066a26dc9475293bfea55b96973ca">u32_protected_add</a></div><div class="ttdeci">uint32_t u32_protected_add(uint32_t a, uint32_t b)</div><div class="ttdoc">Avoid overflow when adding two u32 integers.</div><div class="ttdef"><b>Definition</b> <a href="util_8c_source.html#l00175">util.c:175</a></div></div>
 <div class="ttc" id="autil_8h_html_a3494fcb52c3d0ca1bf610facc8c81514"><div class="ttname"><a href="util_8h.html#a3494fcb52c3d0ca1bf610facc8c81514">NUM_ELEM_IN_ARR</a></div><div class="ttdeci">#define NUM_ELEM_IN_ARR(arr)</div><div class="ttdoc">Get the number of elements in an array.</div><div class="ttdef"><b>Definition</b> <a href="util_8h_source.html#l00026">util.h:26</a></div></div>

@@ -78,7 +78,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "affine__background_8c_source.html",
-"structSprite.html"
+"structList.html#afed088663f8704004425cdae2120b9b3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['digit_5fchar_5fto_5ffont_5fpoint_0',['digit_char_to_font_point',['../font_8h.html#a5c5982b0302d3d4d83f3a245952aab4b',1,'font.c']]]
+  ['change_5fbackground_0',['change_background',['../common__ui_8h.html#a26dbe6146af9c787401916eb0f44acd6',1,'common_ui.c']]]
 ];
