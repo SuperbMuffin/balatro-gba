@@ -139,21 +139,27 @@ $(document).ready(function(){initNavTree('save_8h_source.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 <a href="save_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef SAVE_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define SAVE_H</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="game__variables_8h.html">game_variables.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;tonc.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">void</span> <a class="code hl_function" href="save_8h.html#a080f5ef7e7f8a73a4e49e5ea040391c3">save_game</a>();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="save_8h.html#ab7a3b4a2f1b227a103c8fe5c79779bfc">load_game</a>();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif </span><span class="comment">// SAVE_H</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#ifndef SAVE_H</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define SAVE_H</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="game__variables_8h.html">game_variables.h</a>&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;tonc.h&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="save_8h.html#a9e232271002ca804d61417ca6773b07a">save_game</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="save_8h.html#aaa21de2652c53c85a56f9d5af9544fe1">load_game</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span> <a class="code hl_function" href="save_8h.html#af08a6f81dc09e7abbf2e4f33f99bec6e">save_options</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="save_8h.html#ac26962eff871bc587f90a94b6eef1aaf">load_options</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">// SAVE_H</span></div>
 <div class="ttc" id="agame__variables_8h_html"><div class="ttname"><a href="game__variables_8h.html">game_variables.h</a></div><div class="ttdoc">Game global game variables struct definition.</div></div>
-<div class="ttc" id="asave_8h_html_a080f5ef7e7f8a73a4e49e5ea040391c3"><div class="ttname"><a href="save_8h.html#a080f5ef7e7f8a73a4e49e5ea040391c3">save_game</a></div><div class="ttdeci">void save_game()</div><div class="ttdoc">Save game data to SRAM.</div><div class="ttdef"><b>Definition</b> <a href="save_8c_source.html#l00146">save.c:146</a></div></div>
-<div class="ttc" id="asave_8h_html_ab7a3b4a2f1b227a103c8fe5c79779bfc"><div class="ttname"><a href="save_8h.html#ab7a3b4a2f1b227a103c8fe5c79779bfc">load_game</a></div><div class="ttdeci">void load_game()</div><div class="ttdoc">Load game data from SRAM.</div><div class="ttdef"><b>Definition</b> <a href="save_8c_source.html#l00152">save.c:152</a></div></div>
+<div class="ttc" id="asave_8h_html_a9e232271002ca804d61417ca6773b07a"><div class="ttname"><a href="save_8h.html#a9e232271002ca804d61417ca6773b07a">save_game</a></div><div class="ttdeci">void save_game(void)</div><div class="ttdoc">Save current run data to SRAM.</div><div class="ttdef"><b>Definition</b> <a href="save_8c_source.html#l00324">save.c:324</a></div></div>
+<div class="ttc" id="asave_8h_html_aaa21de2652c53c85a56f9d5af9544fe1"><div class="ttname"><a href="save_8h.html#aaa21de2652c53c85a56f9d5af9544fe1">load_game</a></div><div class="ttdeci">void load_game(void)</div><div class="ttdoc">Load previous run data from SRAM.</div><div class="ttdef"><b>Definition</b> <a href="save_8c_source.html#l00362">save.c:362</a></div></div>
+<div class="ttc" id="asave_8h_html_ac26962eff871bc587f90a94b6eef1aaf"><div class="ttname"><a href="save_8h.html#ac26962eff871bc587f90a94b6eef1aaf">load_options</a></div><div class="ttdeci">void load_options(void)</div><div class="ttdoc">Load options values from SRAM.</div><div class="ttdef"><b>Definition</b> <a href="save_8c_source.html#l00306">save.c:306</a></div></div>
+<div class="ttc" id="asave_8h_html_af08a6f81dc09e7abbf2e4f33f99bec6e"><div class="ttname"><a href="save_8h.html#af08a6f81dc09e7abbf2e4f33f99bec6e">save_options</a></div><div class="ttdeci">void save_options(void)</div><div class="ttdoc">Save options values to SRAM.</div><div class="ttdef"><b>Definition</b> <a href="save_8c_source.html#l00293">save.c:293</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
