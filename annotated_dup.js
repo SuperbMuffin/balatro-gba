@@ -8,6 +8,7 @@ var annotated_dup =
     [ "CardObject", "structCardObject.html", null ],
     [ "ContainedHandTypes", "structContainedHandTypes.html", null ],
     [ "GameVariables", "structGameVariables.html", null ],
+    [ "Hand", "structHand.html", null ],
     [ "HandValues", "structHandValues.html", null ],
     [ "Joker", "structJoker.html", null ],
     [ "JokerEffect", "structJokerEffect.html", null ],
@@ -17,6 +18,7 @@ var annotated_dup =
     [ "List", "structList.html", "structList" ],
     [ "ListItr", "structListItr.html", "structListItr" ],
     [ "ListNode", "structListNode.html", "structListNode" ],
+    [ "RngInfo", "structRngInfo.html", "structRngInfo" ],
     [ "SaveGame", "structSaveGame.html", null ],
     [ "SaveHeader", "structSaveHeader.html", null ],
     [ "SaveOptions", "structSaveOptions.html", null ],
@@ -25,5 +27,6 @@ var annotated_dup =
     [ "SelGridRowAttributes", "structSelGridRowAttributes.html", "structSelGridRowAttributes" ],
     [ "Sprite", "structSprite.html", "structSprite" ],
     [ "SpriteObject", "structSpriteObject.html", "structSpriteObject" ],
-    [ "StateInfo", "structStateInfo.html", null ]
+    [ "StateInfo", "structStateInfo.html", null ],
+    [ "StateMachine", "structStateMachine.html", "structStateMachine" ]
 ];
